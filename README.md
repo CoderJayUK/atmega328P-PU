@@ -21,6 +21,15 @@ This is a living document authored by James Jeffery.
 
 ![ATMega328P Pinout](https://github.com/CoderJayUK/atmega328P-PU/blob/main/atmega328P-pinout.png)
 
+## Development Environment
+
+Use Linux. Don't bother with Windows for embedded programming. You will waste
+numerous hours.
+
+    sudo apt update
+    sudo apt upgrade
+    sudo apt install gcc-avr binutils-avr avr-libc gdb-avr avrdude
+
 ## Programming the ATMega328P
 
 I'm use my handy PICkit2 to program the ATMega328P. The PICkit2 is
