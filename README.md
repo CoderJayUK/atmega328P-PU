@@ -29,6 +29,29 @@ numerous hours. I use Lubuntu on my Lenovo X250.
     sudo apt update
     sudo apt upgrade
     sudo apt install gcc-avr binutils-avr avr-libc gdb-avr avrdude
+    
+This installs the following tools:
+
+* `avr-libc` - C library to use with GCC on Amtel AVR microcontrollers. Together
+with `avr-binutils`, `avr-gcc` and `avr-libc` they form the heart of the free
+software toolchain for AVR microcontrollers. [Documentation](https://www.nongnu.org/avr-libc/user-manual/overview.html).
+
+* `avr-as` - The Assembler
+* `avr-ld` - The Linker
+* `avr-ar` - Create, modify and extract from libraries
+* `avr-randib` - Generate index to library contents
+* `avr-objcopy` - Copy and translate object files to different formats
+* `avr-objdump` - Display information from object files including disassembly
+* `avr-size` - List section sizes and total sizes
+* `avr-nm` - List symbols from object files
+* `avr-strings` - List printable strings from files
+* `avr-strip` - Discard symbols from files
+* `avr-readelf` - Display the contents of ELF file formats
+* `avr-addr2line` - Convert address to file and line
+* `avr-c++filt` - Filter to demangle encoded C++ symbols
+
+* `avrdude`
+* `gdb-avr`
 
 ## Writing Some Code
 
