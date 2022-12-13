@@ -24,7 +24,7 @@ This is a living document authored by James Jeffery.
 ## Development Environment
 
 Use Linux. Don't bother with Windows for embedded programming. You will waste
-numerous hours.
+numerous hours. I use Lubuntu on my Lenovo X250.
 
     sudo apt update
     sudo apt upgrade
