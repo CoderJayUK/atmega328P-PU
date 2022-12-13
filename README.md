@@ -1,5 +1,7 @@
 # ATMega328P-PU DIP-28
 
+This is a living document authored by James Jeffery.
+
 [Datasheet](Microchip-ATMEGA328P-PU-datasheet.pdf)
 
 ## Specs
@@ -17,5 +19,53 @@
 
 ## Pinout
 
-![ATMega329P Pinout](https://github.com/CoderJayUK/atmega328P-PU/blob/main/atmega328P-pinout.png)
+![ATMega328P Pinout](https://github.com/CoderJayUK/atmega328P-PU/blob/main/atmega328P-pinout.png)
 
+## Programming the ATMega328P
+
+I'm use my handy PICkit2 to program the ATMega328P. The PICkit2 is
+a versatile tool that can even be used as a [logic analyser](https://sigrok.org/wiki/Microchip_PICkit2).
+
+### ATMega328P PICkit2 Mapping
+
+| Pin | PICkit2   | ATMega | Pin |
+|-----|-----------|--------|-----|
+| 1   | VDD       | Reset  | ?   |
+| 2   | VDD       | VDD    | ?   |
+| 3   | VSS       | Ground | ?   |
+| 4   | ICSPDAT   | MISO   | ?   |
+| 5   | ICSPCL    | SCK    | ?   |
+| 6   | Auxillary | MOSI   | ?   |
+
+### Using AVRDude
+
+AVRDude is used to flash the ATMega329P using the PICkit2.
+
+#### List Supported Devices
+
+Using the following command you can check what hardware programmers are supported:
+
+    avdude -c nope
+    
+By passing `nope` we force AVRDude to display a list of supported programmers.
+Check that your installation supports `pickit2`.
+
+#### List Supported Part Numbers
+
+To check what part numbers are supported run the following command:
+
+    avrdude -c pickit2
+    
+This will spit out a long list of supported AVR chips. We're interested in the
+`m328p` part number which is for the ATMega328P.
+
+#### Writing Data To Chip
+
+    avrdude -c pickit -p m328p -U <memtype>:r|w|v:<filename>
+    
+* **memtype**: Either **flash**, **eeprom**, **hfuse** (high fuse), **lfuse**
+  (low fuse) or **efuse** (extended fuse)
+* **r|w|v**: Either **r** (read), **w** (write), **v** (verify)
+* **<filename>**: The input or output file (reading or writing respectively)
+
+    avrdude -c pickit -p m328p -U flash:w:prog.hex
