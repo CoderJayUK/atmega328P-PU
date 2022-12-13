@@ -50,8 +50,8 @@ software toolchain for AVR microcontrollers. [Documentation](https://www.nongnu.
 * `avr-addr2line` - Convert address to file and line
 * `avr-c++filt` - Filter to demangle encoded C++ symbols
 
-* `avrdude`
-* `gdb-avr`
+* `avrdude` - Driver programmer for AVR microcontrollers
+* `avr-gdb` - GNU Debugger for AVR
 
 ## Writing Some Code
 
