@@ -30,6 +30,26 @@ numerous hours. I use Lubuntu on my Lenovo X250.
     sudo apt upgrade
     sudo apt install gcc-avr binutils-avr avr-libc gdb-avr avrdude
 
+## Writing Some Code
+
+    TODO: Add Code for prog.c
+
+## Build
+
+**1. Create Object File**
+
+    avr-gcc -g -Os -mmcu=atmega32 -c prog.c
+
+**2. Create ELF binary**
+
+    avr-gcc -g -mmcu=atmega32 -o prog.elf prog.o
+
+**3. Build ihex file**
+
+    avr-objcopy -j .text -j .data -O ihex prog.elf prog.hex
+    
+Now it's time to put the hex file onto the chip :)
+
 ## Programming the ATMega328P
 
 I'm use my handy PICkit2 to program the ATMega328P. The PICkit2 is
