@@ -30,12 +30,12 @@ a versatile tool that can even be used as a [logic analyser](https://sigrok.org/
 
 | Pin | PICkit2   | ATMega | Pin |
 |-----|-----------|--------|-----|
-| 1   | VDD       | Reset  | ?   |
-| 2   | VDD       | VDD    | ?   |
-| 3   | VSS       | Ground | ?   |
-| 4   | ICSPDAT   | MISO   | ?   |
-| 5   | ICSPCL    | SCK    | ?   |
-| 6   | Auxillary | MOSI   | ?   |
+| 1   | VPP       | Reset  | 1   |
+| 2   | VDD       | VCC    | 7   |
+| 3   | VSS       | Ground | 8   |
+| 4   | ICSPDAT   | MISO   | 18  |
+| 5   | ICSPCL    | SCK    | 19  |
+| 6   | Auxillary | MOSI   | 17  |
 
 ### Using AVRDude
 
