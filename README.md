@@ -73,6 +73,11 @@ software toolchain for AVR microcontrollers. [Documentation](https://www.nongnu.
     
 Now it's time to put the hex file onto the chip :)
 
+**What is ihex?**
+
+The 8-bit Intel hex file format is a printable ASCII format consisting of one or
+more data records followed by an end-of-file record. [Read more on Wiki](https://en.wikipedia.org/wiki/Intel_HEX).
+
 ## Programming the ATMega328P
 
 I'm use my handy PICkit2 to program the ATMega328P. The PICkit2 is
